@@ -1,42 +1,31 @@
-/* * {
-    box-sizing: border-box;
-  } */
-body{margin: 0px;font-family: Arial;height: 100%;}
-.banner
+body
 {
-    text-align: center;
+    margin: 0%;
+    height: 100%;
+    color: #ccc;
+    background-color: black;
+}
+.intro
+{
+    position: absolute;
+    top: 110px;
+    font-size: 3.83rem;
+    padding: 100px;
+}
+.talk
+{
+    font-size: 1.58rem;
+    opacity: 7;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 .name
 {
-    font-size: 8vw;
+    font-weight: 550;
 }
-.navbar
-{
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    justify-content: space-around;
-    font-size: 5vh;
-    color: #f2f5f2;
-    align-items: center;
-    height: 100%;
-}
-.navele
-{
-    text-decoration: none;
-    color: white;
-    display: none;
-}
-/*Responsice Nav_Bar*/
-@media (min-width:700px) {
-    .navbar
-    {
-        flex-direction: row;
-        transition: height 3s;
-    }
-    .navele{display: block;}
-    .navbar imgc
-    {
-        display: none;
-    }
+@keyframes move {
+    0% {transform: translateY(0px);}
+    60% {transform: translateY(10px);}
+    100% {transform: translateY(0px);}
 }
