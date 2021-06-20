@@ -9,11 +9,26 @@
     <link rel="stylesheet" href="./sytle.css">
 </head>
 <body>
-    <div class="intro">
-        Hi,<br>
-        I'm <span class="name">Nikhil Walia</span>
-        <p class="talk">Designer and Developer</p>
-    </div>
+    <div class="banner">
+        <div class="intro">
+                <div class="hello">
+                    Hi,<br>
+                    I'm <span class="name">Nikhil Walia</span>
+                </div>
+                <p class="talk">Designer and Developer</p>
+        </div>
+        <button class="nav-sel">
+            <div class="icon open" onclick="show();">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="icon close" onclick="close();">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </button>
+    </div> 
     <script src="action.js"></script>
 </body>
 </html>

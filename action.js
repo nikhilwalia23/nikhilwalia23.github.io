@@ -1,8 +1,27 @@
-function show() {
-    var ele=document.getElementsByClassName("navele");
-    for(var i=0;i<ele.length;i++)
+function show()
+{
+    var ele=document.getElementsByClassName("open");
+    for(item of ele)
     {
-        ele[i].style.display="block";
+        item.style.display="none";
     }
-    document.getElementById('nik').style.display="none";
+    var ele=document.getElementsByClassName("close");
+    for(item of ele)
+    {
+        item.style.display="block";
+    }
+}
+function close()
+{
+    // var ele=document.getElementsByClassName("close");
+    // for(item of ele)
+    // {
+    //     item.style.display="none";
+    // }
+    // var ele=document.getElementsByClassName("open");
+    // for(item of ele)
+    // {
+    //     item.style.display="block";
+    //     console.log(item);
+    // }
 }
