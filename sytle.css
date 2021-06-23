@@ -6,6 +6,11 @@ body
     background-color: black;
     font-size: 100%;
 }
+a
+{
+    text-decoration: none;
+    color: #11111166;
+}
 .intro
 {
     position: absolute;
@@ -53,6 +58,7 @@ body
     box-shadow: 3px 10px 16px #0009;
     cursor: pointer;
     box-sizing: border-box;
+    z-index: 2;
 }
 .nav-sel > i
 {
@@ -67,16 +73,57 @@ body
     margin: 5px;
 }
 .icon {
-    margin-left: 35px;
-    margin-top: -45px;
-}
-.open
-{
-    display: block;
-}   
+    margin-left: 11px;
+    margin-top: -66px;
+    padding: 30px;
+}  
 .close
 {
     display: none;
+}
+.nav-content
+{
+    background-color: #ccc;
+    visibility: hidden;
+    height: 520px;
+    width: 570px;
+    opacity: 1;
+    border-radius: 100%;
+    box-shadow: 3px 10px 16px #0009;
+    position: fixed;
+    right: -230px;
+    bottom: -230px;
+    box-sizing: border-box;
+    color: #11111166;
+}
+.nav-content > div
+{
+    position: relative;
+    z-index: 2;
+    right: 20px;
+    bottom: 25px;
+    font-size: 17px;
+    
+}
+.menu1
+{
+    transform: translate(137px, 182px);
+}
+.menu2
+{
+    transform: translate(285px, 43px);
+}
+.menu3
+{
+    transform: translate(201px, 18px);
+}
+.menu4
+{
+    transform: translate(92px, 71px);
+}
+.font-icon
+{
+    font-size: 40px;
 }
 /* Resonsive Styling For Mobile */
 @media (max-width:750px) {
@@ -88,5 +135,38 @@ body
     {
         font-size: 2rem;
     }
-    
+    .nav-sel
+    {
+        right: -132px;
+        bottom: -108px;
+    }
+    .icon
+    {
+        padding: 12px;
+    }
+    .fas
+    {
+        font-size: 34px;
+    }
+    .nav-content > div
+    {
+        right: 145px;
+        bottom: 45px;
+        font-size: 6px;   
+    }
+    .nav-content
+    {
+        height: 415px;
+        width: 415px;
+    }
+    .menu3 {
+        transform: translate(216px, 46px);
+    }
+    .menu1 {
+        transform: translate(182px, 183px);
+    }
+    .menu4
+    {
+        visibility: hidden;
+    }
 }
