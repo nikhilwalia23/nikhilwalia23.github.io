@@ -20,7 +20,7 @@ a
 }
 .hello
 {
-    animation: move2 4s ease-in-out infinite;
+    animation: move1 4s ease-in-out infinite;
 }
 .talk
 {
@@ -43,7 +43,7 @@ a
 }
 @keyframes move2 {
     0% {transform: translateY(0px);}
-    60% {transform: translateY(10px);}
+    60% {transform: translateY(15px);}
     100% {transform: translateY(0px);}
 }
 .nav-sel
@@ -64,6 +64,10 @@ a
 {
     background-color: black;
     height: 6px;
+}
+.font-icon:hover
+{
+    color: whitesmoke;
 }
 .bar
 {
@@ -124,6 +128,30 @@ a
 .font-icon
 {
     font-size: 40px;
+}
+.star
+{
+    z-index: -2;
+}
+.shooting_star
+{
+    z-index: -1;
+}
+.social-icon
+{
+    font-size: 20px;
+    color: #ccc;
+}
+.social-icon:hover
+{
+    color: white;
+}
+.socials-link
+{
+    animation-name: move2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 /* Resonsive Styling For Mobile */
 @media (max-width:750px) {
