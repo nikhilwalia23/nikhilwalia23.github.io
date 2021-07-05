@@ -9,9 +9,9 @@ onmessage = function(evnt)
   b=evnt.data.dimension.bredth;
   ctx1=canvas1.getContext("2d");
   ctx2=canvas2.getContext("2d");
-  canvas1.width=b-20;
+  canvas1.width=b;
   canvas1.height=l;
-  canvas2.width=b-20;
+  canvas2.width=b;
   canvas2.height=l;
   run();
 }
@@ -37,7 +37,7 @@ function draw_shooting_star()
 function run()
 {
   var star = setInterval(() => {
-    draw_star(Math.random()*b,Math.random()*l,Math.random()/0.7);
+    draw_star(Math.random()*b,Math.random()*l,Math.random()/0.5);
   }, 15);
   setTimeout(() => {
     clearInterval(star);

@@ -132,6 +132,7 @@ a
 .star
 {
     z-index: -2;
+    position: absolute;
 }
 .shooting-star
 {
@@ -200,8 +201,14 @@ a
     {
         visibility: hidden;
     }
+    .shooting-star
+    {
+        width: 400px;
+        height: 700px;
+    }
     .star
     {
         width: 400px;
+        height: 700px;
     }
 }
