@@ -133,9 +133,12 @@ a
 {
     z-index: -2;
 }
-.shooting_star
+.shooting-star
 {
     z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 .social-icon
 {

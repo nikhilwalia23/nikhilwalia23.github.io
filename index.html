@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="banner">
-        <canvas id="starfield" class="star" height="817" width="1279"></canvas>
+        <canvas id="starfield" class="star"></canvas>
+        <canvas id="shootingstar" class="shooting-star" height="817" width="1279"></canvas>
         <div class="intro">
                 <div class="hello">
                     Hi,<br>
@@ -20,16 +21,16 @@
                 <p class="talk">Designer and Developer</p>
                 <div class="socials-link">
                     <a href="https://github.com/nikhilwalia23" target="_blank"><i class="fab fa-github social-icon"></i></a>
-                    <a href="https://www.instagram.com/nikhilwalia23"><i class="fab fa-instagram social-icon"></i></a>
-                    <a href="https://twitter.com/nikhilwalia23"><i class="fab fa-twitter social-icon"></i></a>
-                    <a href="#"><i class="fab fa-linkedin social-icon"></i></a>
+                    <a href="https://www.instagram.com/nikhilwalia23" target="_blank"><i class="fab fa-instagram social-icon"></i></a>
+                    <a href="https://twitter.com/nikhilwalia23" target="_blank"><i class="fab fa-twitter social-icon"></i></a>
+                    <a href="https://www.linkedin.com/in/nikhil-walia-65997a181" target="_blank"><i class="fab fa-linkedin social-icon"></i></a>
                 </div>
         </div>
         <div class="nav-content">
-            <div class="menu1"><i class="fas fa-home font-icon"></i><br><a href="#">Home</a></div>
-            <div class="menu2"><i class="fas fa-desktop font-icon"></i><br><a href="#">Skills</a></div>
-            <div class="menu3"><i class="fas fa-desktop font-icon"></i><br><a href="#">Projects</a></div>
-            <div class="menu4"><i class="fas fa-desktop font-icon"></i><br><a href="#">Education</a></div>
+            <div class="menu1" onclick="construction();"><i class="fas fa-home font-icon"></i><br><a href="#">Home</a></div>
+            <div class="menu2" onclick="construction();"><i class="fas fa-desktop font-icon"></i><br><a href="#">Skills</a></div>
+            <div class="menu3" onclick="construction();"><i class="fas fa-desktop font-icon"></i><br><a href="#">Projects</a></div>
+            <div class="menu4" onclick="construction();"><i class="fas fa-desktop font-icon"></i><br><a href="#">Education</a></div>
         </div>
         <button class="nav-sel">
             <div class="icon open" onclick="show();">
@@ -47,8 +48,11 @@
     <script>
         var starfields=document.getElementById("starfield");
         var starfields_context=starfields.transferControlToOffscreen();
+        var shootinstar=document.getElementById("shootingstar");
+        var shootingstar_context=shootinstar.transferControlToOffscreen();
+        console.log();
         var worker = new Worker("js/worker.js");
-        worker.postMessage({starfields:starfields_context,dimension:{length:window.innerHeight,bredth:window.innerWidth}},[starfields_context]);
+        worker.postMessage({starfields:starfields_context,shootingstar:shootingstar_context,dimension:{length:window.innerHeight,bredth:window.innerWidth}},[starfields_context,shootingstar_context]);
     </script>
 </body>
 </html>
