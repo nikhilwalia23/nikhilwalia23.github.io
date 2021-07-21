@@ -13,7 +13,7 @@
             height: 100%;
         }
     </style>
-    <link rel="stylesheet" href="./sytle.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/76f6ab3fff.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -54,10 +54,17 @@
     <script src="action.js"></script>
     <script>
         var starfields=document.getElementById("starfield");
+        starfields.style.width ='100%';
+        starfields.style.height='100%';
+        starfields.width = starfields.offsetWidth;
+        starfields.height = starfields.offsetHeight;
         var starfields_context=starfields.transferControlToOffscreen();
         var shootinstar=document.getElementById("shootingstar");
+        shootinstar.style.width ='100%';
+        shootinstar.style.height='100%';
+        shootinstar.width = starfields.offsetWidth;
+        shootinstar.height = starfields.offsetHeight;
         var shootingstar_context=shootinstar.transferControlToOffscreen();
-        console.log();
         var worker = new Worker("js/worker.js");
         worker.postMessage({starfields:starfields_context,shootingstar:shootingstar_context,dimension:{length:window.innerHeight,bredth:window.innerWidth}},[starfields_context,shootingstar_context]);
     </script>

@@ -1,0 +1,214 @@
+:root 
+{
+    --primary-font: #ccc;
+    --primary-background: black;
+}
+body
+{
+    margin: 0%;
+    height: 100%;
+    color: var(--primary-font);
+    background-color: var(--primary-background);
+    font-size: 100%;
+}
+.banner
+{
+    height: 100%;
+}
+a
+{
+    text-decoration: none;
+    color: #9c7e7e66;
+}
+.intro
+{
+    position: absolute;
+    top: 110px;
+    font-size: 3.83rem;
+    padding: 100px;
+}
+.hello
+{
+    animation: move1 4s ease-in-out infinite;
+}
+.talk
+{
+    font-size: 1.58rem;
+    opacity: .7;
+    animation-name: move1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin: 0px;
+}
+.name
+{
+    font-weight: 550;
+}
+@keyframes move1 {
+    0% {transform: translateY(0px);}
+    60% {transform: translateY(10px);}
+    100% {transform: translateY(0px);}
+}
+@keyframes move2 {
+    0% {transform: translateY(0px);}
+    60% {transform: translateY(15px);}
+    100% {transform: translateY(0px);}
+}
+.nav-sel
+{
+    background-color: #ccc;
+    position: fixed;
+    right: -100px;
+    bottom: -100px;
+    height: 200px;
+    width: 230px;
+    border-radius: 100%;
+    box-shadow: 3px 10px 16px #0009;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.nav-sel > i
+{
+    background-color: black;
+    height: 6px;
+}
+.font-icon:hover
+{
+    color: whitesmoke;
+}
+.bar
+{
+    background-color: black;
+    width: 50px;
+    height: 5px;
+    margin: 5px;
+}
+.icon {
+    margin-left: 11px;
+    margin-top: -66px;
+    padding: 30px;
+}  
+.close
+{
+    display: none;
+}
+.nav-content
+{
+    background-color: #ccc;
+    visibility: hidden;
+    height: 520px;
+    width: 570px;
+    opacity: 1;
+    border-radius: 100%;
+    box-shadow: 3px 10px 16px #0009;
+    position: fixed;
+    right: -230px;
+    bottom: -230px;
+    box-sizing: border-box;
+    color: #11111166;
+}
+.nav-content > div
+{
+    position: relative;
+    z-index: 2;
+    right: 20px;
+    bottom: 25px;
+    font-size: 17px;
+    
+}
+.menu1
+{
+    transform: translate(137px, 182px);
+}
+.menu2
+{
+    transform: translate(285px, 43px);
+}
+.menu3
+{
+    transform: translate(201px, 18px);
+}
+.menu4
+{
+    transform: translate(92px, 71px);
+}
+.font-icon
+{
+    font-size: 40px;
+}
+.star
+{
+    z-index: -2;
+    position: absolute;
+}
+.shooting-star
+{
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.social-icon
+{
+    font-size: 20px;
+    color: #ccc;
+}
+.social-icon:hover
+{
+    color: white;
+}
+.socials-link
+{
+    animation-name: move2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+/* Resonsive Styling For Mobile */
+@media (max-width:750px) {
+    .intro
+    {
+        padding: 20px;
+        margin: 45px 10px;
+    }
+    .hello
+    {
+        font-size: 2rem;
+    }
+    .nav-sel
+    {
+        right: -132px;
+        bottom: -108px;
+    }
+    .icon
+    {
+        padding: 12px;
+    }
+    .fas
+    {
+        font-size: 34px;
+    }
+    .nav-content > div
+    {
+        right: 145px;
+        bottom: 45px;
+        font-size: 6px;   
+    }
+    .nav-content
+    {
+        height: 415px;
+        width: 415px;
+    }
+    .menu3 {
+        transform: translate(216px, 46px);
+    }
+    .menu1 {
+        transform: translate(182px, 183px);
+    }
+    .menu4
+    {
+        visibility: hidden;
+    }
+}
