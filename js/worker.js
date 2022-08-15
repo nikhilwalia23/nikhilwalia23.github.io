@@ -20,9 +20,9 @@ function draw_star(x,y,paint=1)
 {  
   ctx1.beginPath();
   ctx1.arc(x,y,paint,0,2*Math.PI);
-//   ctx1.fillStyle = 'white';
+  ctx1.fillStyle = 'white';
   ctx1.fill();
-//   ctx1.strokStyle="white";
+  ctx1.strokStyle="white";
   ctx1.stroke();
 }
 //Draw Shooting star
